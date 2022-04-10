@@ -1,0 +1,34 @@
+<MyGrid>:
+
+    seconds: seconds
+    labelMessage: labelMessage
+    sentenceMessage: sentenceMessage
+
+    GridLayout:
+        cols: 1
+        size: root.width - 100, root.height - 100
+        pos: 50, 50
+
+        Label:
+            text: ""
+            id: sentenceMessage
+            foregroundColor: 'red'
+            size: self.texture_size
+            text_size: root.width / 2, None
+            color: 'yellow'
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Seconds: "
+                id: labelMessage
+            TextInput:
+                id: seconds
+                multiline: False
+                input_filter: 'int'
+        
+        Button:
+            text: "Submit"
+            on_press: root.pressed()
+            on_release: root.release()
