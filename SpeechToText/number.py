@@ -1,9 +1,7 @@
 class Data:
+    
+    number = 0 
 
-
-    number = 0 #Helps to stop the car by increasing the number.
-
-         
     def setNumber(self, n):
         self.number = n
         
